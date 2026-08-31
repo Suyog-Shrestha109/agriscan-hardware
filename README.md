@@ -48,12 +48,14 @@ from a value the radio already reports.
 - The path-loss exponent `n` is estimated, not calibrated against measured distances.
 - Distance estimation from RSSI is inherently noisy and needs filtering before it drives anything.
 
-## Next
+## Where this fits
 
-The AgriScan Issue Registry (v1.0, March 2026) flags as High severity: *"No CropBand pairing
-system — no code exists to discover, register, or pair ESP32-C3 CropBands via ESP-NOW."*
-That is the direct continuation of this work.
+CropBands and the Hub both run the ESP32-WROOM-32U, so this device-to-device work applies directly to both ends — one chip, one radio stack, one packet format.
 
+The production link uses ESP-NOW rather than BLE, which is the right call for the deployment:
+ESP-NOW is connectionless, lower latency, and needs no pairing state that has to survive a
+deep-sleep cycle. The BLE work here established the device discovery, connection, notification,
+and RSSI-ranging patterns the ESP-NOW implementation builds on.
 ---
 
 **Source:** Slack `#agriscan-general`, 2026-01-22. Recovered verbatim; the only edit is restoring
