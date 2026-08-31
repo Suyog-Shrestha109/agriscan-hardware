@@ -5,7 +5,7 @@
 **Tracked in the project task system as:** "Work on the Bluetooth-like connection between ESP32s"
 **Written:** January 22, 2026 — recovered from Slack `#agriscan-general`
 
-The device-to-device communication layer for AgriScan, built in four stages in one session.
+The device-to-device communication layer for AgriScan was built in four stages in one session.
 The product requirement driving this work: the system has to move sensor data between a Hub
 and remote CropBands **without any internet connection**, because the farms it targets don't
 have one.
@@ -56,6 +56,7 @@ The production link uses ESP-NOW rather than BLE, which is the right call for th
 ESP-NOW is connectionless, lower latency, and needs no pairing state that has to survive a
 deep-sleep cycle. The BLE work here established the device discovery, connection, notification,
 and RSSI-ranging patterns the ESP-NOW implementation builds on.
+
 ---
 
 **Source:** Slack `#agriscan-general`, 2026-01-22. Recovered verbatim; the only edit is restoring
