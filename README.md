@@ -57,6 +57,23 @@ ESP-NOW is connectionless, lower latency, and needs no pairing state that has to
 deep-sleep cycle. The BLE work here established the device discovery, connection, notification,
 and RSSI-ranging patterns the ESP-NOW implementation builds on.
 
+## Sensor integration
+
+`src/05_sensor_integration.ino` — written ~April 2026
+
+Reads the three sensor types on a node and prints them over serial:
+
+| Sensor | Interface | Reads |
+|---|---|---|
+| DS18B20 | 1-Wire, 4.7k pull-up on DQ | Soil temperature |
+| DHT22 (AM2302) | Single-wire digital | Air temperature, humidity |
+| 2 x capacitive probe | Analog | Soil moisture, raw ADC |
+
+Two decisions in here:
+
+- **Capacitive probes rather than resistive.** Resistive metal-to-soil probes corrode and drift once they have been sitting in wet soil, which rules them out for a sensor meant to stay buried in a field.
+- **Raw ADC values are printed, not converted percentages.** Calibration and the soil physics live on the Hub, so improving the moisture model never requires reflashing sensors already deployed.
+
 ---
 
 **Source:** Slack `#agriscan-general`, 2026-01-22. Recovered verbatim; the only edit is restoring
