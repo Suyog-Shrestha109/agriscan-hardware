@@ -1,15 +1,14 @@
 # Hardware
 
-Design documents for the AgriScan hub and CropBand nodes.
+Design documents for the AgriScan hub.
 
 | File | What it is |
 |---|---|
 | `hub-perfboard-layout-dimensioned.jpg` | Hand-drawn component layout, 9.3 × 7 cm perfboard. Measured footprints, clearances, connector positions, mounting holes. The enclosure CAD was dimensioned from this. |
-| `schematic.pdf` | Hub schematic (KiCad) |
-| `pin-map.md` | GPIO assignments |
-| `bom.csv` | Parts list — quantity, hub or cropband, price |
-| `power-chain.md` | Panel → charger → cell → boost → ESP32 |
-| `cad/` | Enclosure — Fusion source, STL, STEP |
+| `AgriScan Hub Prefboard.kicad_sch` | Hub schematic — KiCad source |
+| `AgriScan Hub Prefboard.kicad_pro` | KiCad project file |
+| `AgriScan Hub Prefboard.pdf` | Schematic, plotted for viewing |
+| `bom.csv` | Bill of materials, generated from the schematic |
 
 ## Power chain
 
