@@ -1,0 +1,7 @@
+"Reference","Qty","Value","DNP","Exclude from BOM","Exclude from Board","Footprint","Datasheet"
+"Capacitive1,Capacitive2","2","Soil Moisture Sensor","","","","",""
+"J1","1","Micro_SD_Card","","","","","https://www.we-online.com/components/products/datasheet/693072010801.pdf"
+"R1","1","4.7k","","","","",""
+"U1","1","DS18B20","","","","Package_TO_SOT_THT:TO-92_Inline","http://datasheets.maximintegrated.com/en/ds/DS18B20.pdf"
+"U2","1","ESP32-WROOM-32U","","","","RF_Module:ESP32-WROOM-32U","https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32d_esp32-wroom-32u_datasheet_en.pdf"
+"U3","1","AM2302","","","","Sensor:ASAIR_AM2302_P2.54mm_Vertical","http://akizukidenshi.com/download/ds/aosong/AM2302.pdf"
